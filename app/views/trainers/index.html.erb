@@ -1,6 +1,13 @@
 <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
-
+<div class="center">
+   <%= form_tag trainers_path, :method => 'get',:id => "trainers_search" do %>    
+   <div class="inner-addon float: left;">
+<i class="glyphicon glyphicon-search"></i>
+    <%= text_field_tag :search, params[:search],placeholder: "Search Items", class:"btn btn-default" %>
+    <%= submit_tag "Search", :name => nil, class: "btn btn-large btn-primary" %> 
+<% end %>
+</div></div>
 <h1><%= link_to "Home", root_path %></h1>
   Download:
   <%= link_to "CSV", trainers_path(format: "csv") %> |
