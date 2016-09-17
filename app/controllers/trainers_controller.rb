@@ -12,6 +12,7 @@ class TrainersController < ApplicationController
 end
 
 def import
+	
 	file      = params[:file]
 	book   = Spreadsheet.open(file.path)
     sheet1 = book.worksheet 0
