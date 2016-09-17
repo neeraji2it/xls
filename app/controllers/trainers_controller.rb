@@ -3,16 +3,17 @@ class TrainersController < ApplicationController
 	def index
  	     @trainers = Trainer.all
      		@trainer= Trainer.new
-
- respond_to do |format|
+     if params[:search]
+       @trainers = Trainer.search(params[:search]).order("created_at DESC")
+      respond_to do |format|
     format.html
     format.csv { send_data @trainers.to_csv }
     format.xls # { send_data @products.to_csv(col_sep: "\t") }
   end
 end
+end
 
 def import
-	
 	file      = params[:file]
 	book   = Spreadsheet.open(file.path)
     sheet1 = book.worksheet 0

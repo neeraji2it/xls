@@ -4,7 +4,7 @@ development:
   database: xls_development
   pool: 5
   username: root
-  password: root
+  password: dinemedia
 
 
 test:
@@ -13,7 +13,7 @@ test:
   database: xls_test
   pool: 5
   username: root
-  password: root
+  password: dinemedia
 
 production:
   adapter: mysql2
@@ -21,4 +21,4 @@ production:
   database: xls_production
   pool: 5
   username: root
-  password: root
+  password: dinemedia
