@@ -1,20 +1,21 @@
-<div class="col-md-6 col-md-offset-5">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-<p>
 <div class="center">
    <%= form_tag trainers_path, :method => 'get',:id => "trainers_search" do %>    
    <div class="inner-addon float: left;">
 <i class="glyphicon glyphicon-search"></i>
     <%= text_field_tag :search, params[:search],placeholder: "Search Items", class:"btn btn-default" %>
-    <%= submit_tag "Search", :name => nil, class:"btn btn-default" %> 
+    <%= submit_tag "Search", :name => nil, class: "btn btn-large btn-primary" %> 
 <% end %>
-</div></div></p>
+</div></div>
+
+
+
+
 <h1><%= link_to "Home", root_path %></h1>
+
   Download:
   <%= link_to "CSV", trainers_path(format: "csv") %> |
   <%= link_to "Excel", trainers_path(format: "xls") %>
-</p>
+
 <table class="table table-bordered table-striped">
 <thead>
     <tr>
@@ -61,15 +62,14 @@
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
 <% end %>
-     .
-</div></div></div>
+
 
 <style>
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     border: 0 none;
     font: inherit;
-    margin: 0;
+    margin: 4px;
     padding: 6px;
     vertical-align: baseline;
 }
