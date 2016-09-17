@@ -1,0 +1,69 @@
+<div class="col-md-6 col-md-offset-5">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+<p>
+
+<h1><%= link_to "Home", root_path %></h1>
+  Download:
+  <%= link_to "CSV", trainers_path(format: "csv") %> |
+  <%= link_to "Excel", trainers_path(format: "xls") %>
+</p>
+<table class="table table-bordered table-striped">
+<thead>
+    <tr>
+    <th>SN</th>
+      <th>Trainer Name</th>
+      <th>Type</th>
+      <th>Industry</th>
+      <th>Years of Experience (years)</th>
+      <th>Expertise</th>
+      <th>Geography</th>
+      <th>Overall Ratings on</th>
+      <th>References</th>
+
+       <th>Caption part</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+   <% @trainers.each_with_index do |trainer,index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+           <td><%= trainer.name %></td>
+          <td><%= trainer.profile_type %></td>
+            <td><%= trainer.industry %></td>
+              <td><%= trainer.experience %></td>
+              <td><%= trainer.expertise %></td>
+            <td><%= trainer.geography %></td>
+              <td><%= trainer.rating %></td>
+             <td><%= trainer.references %></td>
+   <%#= link_to "File", trainer.avatar_url %>
+         <td><%= link_to "delete",  trainer, method: :delete, confirm: "Are you sure that you wish to delete #{trainer.name}?" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h2>Import Products</h2>
+
+<%= form_tag import_trainers_path, multipart: true do %>
+
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+     .
+</div></div></div>
+
+<style>
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 6px;
+    vertical-align: baseline;
+}
+</style>

@@ -1,0 +1,46 @@
+<div class="col-md-6 col-md-offset-5">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">SN</Data></Cell>
+        <Cell><Data ss:Type="String">Trainer Name</Data></Cell>
+        <Cell><Data ss:Type="String">Type</Data></Cell>
+        <Cell><Data ss:Type="String">Industry</Data></Cell>
+
+           <Cell><Data ss:Type="decimal">Years of Experience (years)</Data></Cell>
+        <Cell><Data ss:Type="String">Expertise</Data></Cell>
+        <Cell><Data ss:Type="String">Type</Data></Cell>
+        <Cell><Data ss:Type="String">Industry</Data></Cell>
+
+           <Cell><Data ss:Type="String">Overall Ratings on</Data></Cell>
+        <Cell><Data ss:Type="String">References</Data></Cell>
+      </Row>
+
+   <% @trainers.each_with_index do |trainer,index| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= index + 1  %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= trainer.name %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= trainer.profile_type %></Data></Cell>
+        <Cell><Data ss:Type="String"><%=trainer.industry%></Data></Cell>
+
+             <Cell><Data ss:Type="Number"><%=trainer.experience  %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= trainer.geography %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= trainer.rating %></Data></Cell>
+        <Cell><Data ss:Type="String"><%=trainer.references%></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+
+
+</div></div></div>

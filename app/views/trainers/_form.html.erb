@@ -1,0 +1,75 @@
+<%= form_for @trainer, html: { multipart: true } do |f| %>
+
+
+  <% if @trainer.errors.any? %>
+
+    <div id="error_explanation">
+
+      <h2><%= pluralize(@trainer.errors.count, "error") %> prohibited this trainer from being saved:</h2>
+
+      <ul>
+      <% @trainer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+
+      </ul>
+    </div>
+  <% end %>
+
+ <%= f.label :name %><br/>
+  <div class="input-group">
+         
+          <%= f.text_field :name, placeholder: "", class: "form-control input-lg", label: false, :required =>true %>
+        </div><br/>
+
+<%= f.label :type %><br/>
+  <div class="input-group">
+        
+          <%= f.text_field :profile_type, placeholder: "", class: "form-control input-lg", label: false, :required =>true %>
+        </div><br/>
+
+  <%= f.label :industry %><br/>
+  <div class="input-group">
+       
+          <%= f.text_field :industry, placeholder: "", class: "form-control input-lg", label: false, :required =>true %>
+        </div><br/>
+
+
+        <%= f.label :experience %><br/>
+  <div class="input-group">
+     
+          <%= f.number_field :experience, placeholder: "", class: "form-control input-lg", label: false, :required =>true %>
+        </div><br/>
+
+        <%= f.label :Expertise %><br/>
+  <div class="input-group">
+         
+          <%= f.text_field :expertise, placeholder: "", class: "form-control input-lg", label: false, :required =>true %>
+        </div><br/>
+        <%= f.label :geography %><br/>
+  <div class="input-group">
+        
+          <%= f.text_area :geography, placeholder: "", class: "form-control input-lg", label: false, :required =>true %>
+        </div><br/>        
+
+
+        <%= f.label :rating %><br/>
+  <div class="input-group">
+       
+          <%= f.number_field :rating, placeholder: "rating", class: "form-control input-lg", label: false, :required =>true %>
+        </div><br/>
+        <div class="field">
+<%= f.label :References %>
+  <div class="input-group">
+<%= f.select :references, Trainer::REFIRENCE, prompt: 'yes', class: "form-control input-lg", label: false, :required =>true %>
+</div>
+                <%= f.label :File %><br/>
+
+   
+          <%= f.file_field :avatar, :required =>true %>
+
+      .
+        </div><br/>
+
+  <%= f.submit "Create trainer" %>
+    <% end %>

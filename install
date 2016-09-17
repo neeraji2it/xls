@@ -1,0 +1,212 @@
+Script started on Friday 16 September 2016 02:41:16 PM IST
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$ rake thinking_sphinx:index
+rake aborted!
+Don't know how to build task 'thinking_sphinx:index' (see --tasks)
+/home/rails/.rvm/gems/ruby-2.0.0-p643/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/rails/.rvm/gems/ruby-2.0.0-p643/bin/ruby_executable_hooks:15:in `eval'
+/home/rails/.rvm/gems/ruby-2.0.0-p643/bin/ruby_executable_hooks:15:in `<main>'
+(See full trace by running task with --trace)
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$ rake thinking_sphinx:index
+rake aborted!
+Don't know how to build task 'thinking_sphinx:index' (see --tasks)
+/home/rails/.rvm/gems/ruby-2.0.0-p643/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/rails/.rvm/gems/ruby-2.0.0-p643/bin/ruby_executable_hooks:15:in `eval'
+/home/rails/.rvm/gems/ruby-2.0.0-p643/bin/ruby_executable_hooks:15:in `<main>'
+(See full trace by running task with --trace)
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$ bundle install
+[33mYour Gemfile lists the gem nokogiri (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of just one of them later.[0m
+Fetching gem metadata from https://rubygems.org/
+Fetching version metadata from https://rubygems.org/
+Fetching dependency metadata from https://rubygems.org/
+Resolving dependencies...............
+Using rake 11.2.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.9.0
+Using thread_safe 0.3.5
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using pkg-config 1.1.7
+Using rack 1.6.4
+Using mime-types-data 3.2016.0521
+Using arel 6.0.3
+Using debug_inspector 0.0.2
+Using bundler 1.12.5
+Using byebug 9.0.5
+Using coffee-script-source 1.10.0
+Using execjs 2.7.0
+Using thor 0.19.1
+Using commonjs 0.2.7
+Using concurrent-ruby 1.0.2
+Using daemons 1.2.4
+Using eventmachine 1.2.0.1
+Using innertube 1.1.0
+Using multi_json 1.12.1
+Using tilt 2.0.5
+Using libv8 3.16.14.15
+Using middleware 0.1.0
+Using mysql2 0.4.4
+Using ref 2.0.0
+Using riddle 1.5.12
+Using ruby-ole 1.2.12
+Using rubyzip 1.2.0
+Using sass 3.4.22
+Using spring 1.7.2
+Using turbolinks-source 5.0.0
+Using rdoc 4.2.2
+Using tzinfo 1.2.2
+Using nokogiri 1.6.8
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.0.2
+Using less 2.6.0
+Using sprockets 3.7.0
+Using thin 1.7.0
+Using therubyracer 0.12.2
+Using spreadsheet 0.9.0
+Using turbolinks 5.0.1
+Using sdoc 0.4.1
+Using activesupport 4.2.6
+Using loofah 2.0.3
+Using mail 2.6.4
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.6
+Using jbuilder 2.6.0
+Using rails-html-sanitizer 1.0.3
+Using rails-dom-testing 1.0.7
+Using activejob 4.2.6
+Using activerecord 4.2.6
+Using carrierwave 1.0.0.beta
+Using actionview 4.2.6
+Using joiner 0.3.4
+Using actionpack 4.2.6
+
+[33mGem::RemoteFetcher::UnknownHostError: no such name (https://rubygems.org/gems/thinking-sphinx-3.2.0.gem)[0m
+Using actionmailer 4.2.6
+Using railties 4.2.6
+Using less-rails 2.7.1
+Using sprockets-rails 3.2.0
+[31mAn error occurred while installing thinking-sphinx (3.2.0), and Bundler cannot continue.
+Make sure that `gem install thinking-sphinx -v '3.2.0'` succeeds before bundling.[0m
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$ gem install thinking-sphinx -v '3.2.0'
+ERROR:  While executing gem ... (Gem::RemoteFetcher::UnknownHostError)
+    no such name (https://api.rubygems.org/gems/thinking-sphinx-3.2.0.gem)
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$ gem install thinking-sphinx -v '3.2.0'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pbundle install
+[33mYour Gemfile lists the gem nokogiri (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of just one of them later.[0m
+Resolving dependencies....
+Using rake 11.2.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.9.0
+Using thread_safe 0.3.5
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using pkg-config 1.1.7
+Using rack 1.6.4
+Using mime-types-data 3.2016.0521
+Using arel 6.0.3
+Using debug_inspector 0.0.2
+Using bundler 1.12.5
+Using byebug 9.0.5
+Using coffee-script-source 1.10.0
+Using execjs 2.7.0
+Using thor 0.19.1
+Using commonjs 0.2.7
+Using concurrent-ruby 1.0.2
+Using daemons 1.2.4
+Using eventmachine 1.2.0.1
+Using innertube 1.1.0
+Using multi_json 1.12.1
+Using tilt 2.0.5
+Using libv8 3.16.14.15
+Using middleware 0.1.0
+Using mysql2 0.4.4
+Using ref 2.0.0
+Using riddle 1.5.12
+Using ruby-ole 1.2.12
+Using rubyzip 1.2.0
+Using sass 3.4.22
+Using spring 1.7.2
+Using turbolinks-source 5.0.0
+Using rdoc 4.2.2
+Using tzinfo 1.2.2
+Using nokogiri 1.6.8
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.0.2
+Using less 2.6.0
+Using sprockets 3.7.0
+Using thin 1.7.0
+Using therubyracer 0.12.2
+Using spreadsheet 0.9.0
+Using turbolinks 5.0.1
+Using sdoc 0.4.1
+Using activesupport 4.2.6
+Using loofah 2.0.3
+Using mail 2.6.4
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.6
+Using jbuilder 2.6.0
+Using rails-html-sanitizer 1.0.3
+Using rails-dom-testing 1.0.7
+Using activejob 4.2.6
+Using activerecord 4.2.6
+Using carrierwave 1.0.0.beta
+Using actionview 4.2.6
+Using joiner 0.3.4
+Using actionpack 4.2.6
+Using thinking-sphinx 3.1.4
+Using actionmailer 4.2.6
+Using railties 4.2.6
+Using less-rails 2.7.1
+Using sprockets-rails 3.2.0
+Using coffee-rails 4.1.1
+Using jquery-rails 4.2.1
+Using quiet_assets 1.1.0
+Using twitter-bootstrap-rails 3.2.2
+Using rails 4.2.6
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+[32mBundle complete! 23 Gemfile dependencies, 77 gems now installed.[0m
+[32mUse `bundle show [gemname]` to see where a bundled gem is installed.[0m
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$ bundle installgem install thinking-sphinx -v '3.2.0'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pbundle installrake thinking_sphinx:index
+rake aborted!
+Don't know how to build task 'thinking_sphinx:index' (see --tasks)
+/home/rails/.rvm/gems/ruby-2.0.0-p643/gems/rake-11.2.2/exe/rake:27:in `<top (required)>'
+/home/rails/.rvm/gems/ruby-2.0.0-p643/bin/ruby_executable_hooks:15:in `eval'
+/home/rails/.rvm/gems/ruby-2.0.0-p643/bin/ruby_executable_hooks:15:in `<main>'
+(See full trace by running task with --trace)
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$  indexes title, :sortable => true[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Krake ts:index
+Generating configuration to /home/rails/xls/config/development.sphinx.conf
+Sphinx 2.0.5-release (r3308)
+Copyright (c) 2001-2012, Andrew Aksyonoff
+Copyright (c) 2008-2012, Sphinx Technologies Inc (http://sphinxsearch.com)
+
+using config file '/home/rails/xls/config/development.sphinx.conf'...
+FATAL: no indexes found in config file '/home/rails/xls/config/development.sphinx.conf'
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$ rake ts:index
+Generating configuration to /home/rails/xls/config/development.sphinx.conf
+Sphinx 2.0.5-release (r3308)
+Copyright (c) 2001-2012, Andrew Aksyonoff
+Copyright (c) 2008-2012, Sphinx Technologies Inc (http://sphinxsearch.com)
+
+using config file '/home/rails/xls/config/development.sphinx.conf'...
+FATAL: no indexes found in config file '/home/rails/xls/config/development.sphinx.conf'
+]0;rails@rails-AM1M-S2H: ~/xlsrails@rails-AM1M-S2H:~/xls$ cd
+]0;rails@rails-AM1M-S2H: ~rails@rails-AM1M-S2H:~$ cd b
+bitcoins/                   blackrockdigital.github.io/ blog/                       
+]0;rails@rails-AM1M-S2H: ~rails@rails-AM1M-S2H:~$ cd blog/
+]0;rails@rails-AM1M-S2H: ~/blograils@rails-AM1M-S2H:~/blog$ subl .
+]0;rails@ra
