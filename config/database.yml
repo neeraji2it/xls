@@ -1,17 +1,24 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
-default: &default
-  adapter: mysql2
-  username: root
-
-  password: dinemedia
-  pool: 5
-  timeout: 5000
-
 development:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8
   database: xls_development
+  pool: 5
+  username: root
+  password: root
+
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  database: xls_test
+  pool: 5
+  username: root
+  password: root
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: xls_production
+  pool: 5
+  username: root
+  password: root
