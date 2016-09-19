@@ -21,7 +21,7 @@ gem 'thin'
 gem 'quiet_assets'
 gem "therubyracer"
 gem "twitter-bootstrap-rails"
-
+gem 'jquery-datatables-rails' 
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
