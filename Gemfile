@@ -2,12 +2,7 @@ source 'https://rubygems.org'
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'nokogiri'
 gem 'spreadsheet'
-
 gem 'rubyzip'
-
-gem 'nokogiri'
-
-
 gem 'jdbc-mysql',      '= 5.1.35', :platform => :jruby
 gem 'thinking-sphinx'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
