@@ -13,7 +13,10 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
 resources :trainers do
-  collection { post :import }
+  collection do 
+    post :import
+    get :search
+  end
 end
 
   # Example resource route with options:

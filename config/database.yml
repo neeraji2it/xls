@@ -4,21 +4,4 @@ development:
   database: xls_development
   pool: 5
   username: root
-  password: dinemedia
-
-
-test:
-  adapter: mysql2
-  encoding: utf8
-  database: xls_test
-  pool: 5
-  username: root
-  password: dinemedia
-
-production:
-  adapter: mysql2
-  encoding: utf8
-  database: xls_production
-  pool: 5
-  username: root
-  password: dinemedia
+  password: root

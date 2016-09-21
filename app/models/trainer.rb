@@ -35,7 +35,7 @@ end
 
 
 
-def self.search(search)
-  where("name LIKE ? OR profile_type LIKE ? OR industry LIKE ?  OR experience LIKE ? OR  expertise LIKE ? ", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%") 
+def self.search(name,industry,expertise,location,rating)
+  where("name LIKE ? AND industry LIKE ? AND  expertise LIKE ? AND geography LIKE ? AND rating LIKE ?", "%#{name}%", "%#{industry}%", "%#{expertise}%", "%#{location}%", "%#{rating}%") 
 end
 end

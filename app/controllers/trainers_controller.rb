@@ -8,10 +8,11 @@ class TrainersController < ApplicationController
     format.html
     format.csv { send_data @trainers.to_csv }
     format.xls # { send_data @products.to_csv(col_sep: "\t") }
-    if params[:search]
-       @trainers = Trainer.search(params[:search]).order("created_at DESC")
-     end
 end
+end
+
+def search
+@trainers = Trainer.search(params[:trainer_name],params[:trainer_industry],params[:trainer_expertise],params[:trainer_geography],params[:rating]).order("created_at DESC")
 end
 
 def import
