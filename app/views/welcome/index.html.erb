@@ -1,5 +1,5 @@
-<%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: 250px;",:id => "search" do %>
-<h1>TRAINERHUB.COM</h1>
+<%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: 140px;",:id => "search" do %>
+<h1 style="position: relative;top: -150px;">TRAINERHUB.COM</h1>
   <%= select_tag :trainer_name, options_for_select([["Trainer name",""]]+Trainer.all.map{|a| a.name}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
             <%= select_tag :trainer_industry, options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
           <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+Trainer.all.map{|a| a.expertise}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
