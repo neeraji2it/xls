@@ -16,3 +16,11 @@
 //= require turbolinks
 //= require dataTables/jquery.dataTables
 //= require_tree .
+ 
+$(document).ready(function() {
+
+  $("select#search").change(function(){
+    $(this).closest("form").submit();
+  });
+
+});

@@ -1,3 +1,4 @@
+
 <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
 
 <h1><%= link_to "Home", root_path %></h1>
@@ -36,7 +37,10 @@
               <td><%= trainer.rating %></td>
              <td><%= trainer.references %></td>
    <%#= link_to "File", trainer.avatar_url %>
-         <td><%= link_to "delete",  trainer, method: :delete, confirm: "Are you sure that you wish to delete #{trainer.name}?" %></td>
+
+         <td><%= link_to "delete",  trainer, method: :delete, confirm: "Are you sure that you wish to delete #{trainer.name}?" %>
+           <%= link_to 'Show', trainer %>
+         </td>
       </tr>
     <% end %>
   </tbody>
@@ -50,13 +54,22 @@
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
 <% end %>
+     
 
 
 
 
 <script src="/assets/jquery.dataTables.min.js" type="text/javascript"></script>
 <script>
+
+
 $(document).ready(function() {
     $('#example').DataTable();
 } );
+</script>
+<script>
+  $('#trainer').change(function()
+ {
+     $('#dropdown').submit();
+ });
 </script>

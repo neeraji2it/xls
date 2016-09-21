@@ -3,8 +3,7 @@ class TrainersController < ApplicationController
 	def index
  	     @trainers = Trainer.all
      		@trainer= Trainer.new
-     
-      respond_to do |format|
+    respond_to do |format|
     format.html
     format.csv { send_data @trainers.to_csv }
     format.xls # { send_data @products.to_csv(col_sep: "\t") }
@@ -14,14 +13,15 @@ class TrainersController < ApplicationController
 end
 end
 
+
 def import
-	file      = params[:file]
+	file  = params[:file]
 	book   = Spreadsheet.open(file.path)
     sheet1 = book.worksheet 0
     sheet1.each do |row|
         Trainer.create(:name => row[1],:profile_type => row[2],:industry => row[3], :experience => row[4], :expertise => row[5], :geography => row[6], :rating => row[7],:references => row[8])
       end
-  redirect_to trainers_url, notice: "Products is imported."
+  redirect_to _url, notice: "Products imported."
 end
 def new
 		@trainer= Trainer.new
