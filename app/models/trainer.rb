@@ -33,8 +33,9 @@ def self.open_spreadsheet(file)
   end
 end
 
-	def self.search(search)
-  # Title is for the above case, the OP incorrectly had 'name'
-  where("name LIKE ?", "%#{search}%")
+
+
+def self.search(search)
+  where("name LIKE ? OR profile_type LIKE ? OR industry LIKE ?  OR experience LIKE ? OR  expertise LIKE ? ", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%") 
 end
 end
