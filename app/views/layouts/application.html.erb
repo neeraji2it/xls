@@ -17,20 +17,15 @@
 <%= link_to "Home", root_path %>
 <%= link_to "About","#"  %>
 </div>
-             
-
 <div id= "sign_in" >
 <%= link_to "Help?", root_path %>
-
 <%= link_to "Trainers", trainers_path %>
 </div></div>
 </nav>
-
 <div id= "main_wrap" >
 <p><%#= render 'layouts/navbar' %></p>
 <%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
 <h1 style="position: relative;top: -51px;font-weight: bold;font-color:green;"> TRAINERZHUB.COM</h1>
-
 <h2>
 SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br><br>
   <%= select_tag :trainer_name, options_for_select([["Trainer name",""]]+Trainer.all.map{|a| a.name}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
