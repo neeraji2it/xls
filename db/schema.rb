@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160915115543) do
     t.decimal  "experience",               precision: 10
     t.string   "expertise",    limit: 255
     t.string   "geography",    limit: 255
-    t.decimal  "rating",                   precision: 10
+    t.float    "rating",       limit: 24
     t.string   "references",   limit: 255
     t.datetime "created_at",                              null: false
     t.datetime "updated_at",                              null: false

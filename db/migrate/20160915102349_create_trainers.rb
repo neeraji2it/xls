@@ -7,7 +7,7 @@ class CreateTrainers < ActiveRecord::Migration
       t.decimal :experience
       t.string :expertise
       t.string :geography
-      t.decimal :rating
+      t.float :rating
       t.string :references
       t.timestamps null: false
     end

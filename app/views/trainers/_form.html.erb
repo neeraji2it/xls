@@ -1,7 +1,5 @@
 <%= form_for @trainer, html: { multipart: true } do |f| %>
-
-
-  <% if @trainer.errors.any? %>
+ <% if @trainer.errors.any? %>
 
     <div id="error_explanation">
 
@@ -15,12 +13,7 @@
       </ul>
     </div>
   <% end %>
-
-  
- 
- 
-
- <%= f.label :name %><br/>
+<%= f.label :name %><br/>
   <div class="input-group">
          
           <%= f.text_field :name, placeholder: "", class: "form-control input-lg", label: false, :required =>true %>
