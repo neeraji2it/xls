@@ -14,3 +14,93 @@
  *= require dataTables/jquery.dataTables
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+*{
+    margin: 12;
+    padding: 15;
+}
+
+
+#nav {
+    background: none repeat scroll 0 0 #006699;
+    float: left;
+    height: 79px;
+    width: 100%;
+}
+#page_nav a, #sign_in a{
+    line-height: 58px;
+    color: #fff;
+    padding: 0 20px 0 10px;
+    text-decoration: none;
+
+}
+#element {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 346px;
+}
+#page_nav{
+    margin:0 0 0 5%;
+    float: left;
+}
+
+#sign_in{
+    float: right;
+    margin:0 5% 0 0;
+}
+
+#main_wrap{
+    width: 90%;
+    float: left;
+    margin: 20px 5% 0 5%;
+}
+
+
+
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 2px solid transparent;
+    border-radius: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.bx-wrapper {
+    background: none repeat scroll 0 0 #fff;
+    border: 5px dashed #fff;
+    box-shadow: 0 8px 24px #00FFFF;
+}
+
+
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }

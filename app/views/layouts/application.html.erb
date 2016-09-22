@@ -1,78 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "XSL" %></title>
-    
-    <%= csrf_meta_tags %>
+<html>
+<head>
+  <title>xls</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
-    <![endif]-->
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag "application", :media => "all" %>
+</head>
+<body>
 
-    <!-- For third-generation iPad with high-resolution Retina display: -->
-    <!-- Size should be 144 x 144 pixels -->
-    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+  <nav id ="nav">
 
-    <!-- For iPhone with high-resolution Retina display: -->
-    <!-- Size should be 114 x 114 pixels -->
-    <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+ </div> 
 
-    <!-- For first- and second-generation iPad: -->
-    <!-- Size should be 72 x 72 pixels -->
-    <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+<div id= "page_nav" >
+<%= link_to "Home", root_path %>
+<%= link_to "About","#"  %>
+</div>
+             
 
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <!-- Size should be 57 x 57 pixels -->
-    <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+<div id= "sign_in" >
+<%= link_to "Help?", root_path %>
 
-    <!-- For all other devices -->
-    <!-- Size should be 32 x 32 pixels -->
-    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+<%= link_to "Trainers", trainers_path %>
 
-    <%= javascript_include_tag "application" %>
-  </head>
-  <body>
+</div></div>
 
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">XLS</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-           <li><%= link_to "Home", "#"%></li><br>
-          </ul>
+</nav>
 
-        <ul class="nav navbar-nav navbar-right">
-   <li><%= link_to "Trainers", trainers_path %></li><br>
-</ul></div></div></div>
+<div id= "main_wrap" >
+<p><%#= render 'layouts/navbar' %></p>
+<%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
+<h1 style="position: relative;top: -51px;font-weight: bold;font-color:green;"> TRAINERZHUB.COM</h1>
 
-<div class="container">
-      <div class="row">
-        
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-     </div><!--/row-->
-     <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-      </body></html>
-<script>
-    $('.alert').fadeOut(4000);
-</script>
+<h2>
+SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br><br>
+  <%= select_tag :trainer_name, options_for_select([["Trainer name",""]]+Trainer.all.map{|a| a.name}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
+            <%#= select_tag :trainer_industry, options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
+          <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+Trainer.all.map{|a| a.expertise}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
+               <%= select_tag :trainer_geography, options_for_select([["Location",""]]+Trainer.all.map{|a| a.geography}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
+<%= select_tag :rating, options_for_select([["Rating",""]]+Trainer.all.map{|a| a.rating}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
+        <%= submit_tag "Search",class: "btn btn-warning"%>   
+<% end %>
+</div>
+<%= yield %>
+<footer>
+<div id= "footer" >
+<%= render :partial => '/layouts/footer' %>
+</div>
 
+</footer>
+<div class="text-center">
+      Copyright © 2016 . All rights reserved.
+    </div>
 
-<style>
-p {
-  margin: 217px 101px 10px;
-}</style>
+</body>
+</html>
