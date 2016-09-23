@@ -2,10 +2,9 @@
 <html>
 <head>
   <title>xls</title>
-<%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-
-  <%= csrf_meta_tags %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
 
 </head>
 <body>
@@ -28,9 +27,9 @@
 <h1 style="position: relative;top: -51px;font-weight: bold;font-color:green;"> TRAINERZHUB.COM</h1>
 <h2>
 SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br><br>
-  <%= select_tag :trainer_name, options_for_select([["Trainer name",""]]+Trainer.all.map{|a| a.name}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
             <%#= select_tag :trainer_industry, options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
           <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+Trainer.all.map{|a| a.expertise}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
+             <%= select_tag :trainer_experience, options_for_select([["Experience",""]]+Trainer.all.map{|a| a.experience}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
                <%= select_tag :trainer_geography, options_for_select([["Location",""]]+Trainer.all.map{|a| a.geography}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
 <%= select_tag :rating, options_for_select([["Rating",""]]+Trainer.all.map{|a| a.rating}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
         <%= submit_tag "Search",class: "btn btn-warning"%>   
