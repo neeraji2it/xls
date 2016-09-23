@@ -15,6 +15,7 @@
 //= require twitter/bootstrap
 
 //= require dataTables/jquery.dataTables
+//= require jquery.form-validator
 //= require_tree .
  
 $(document).ready(function() {

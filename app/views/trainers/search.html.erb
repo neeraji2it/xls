@@ -1,5 +1,5 @@
 <div class="text-center">
-<% if @trainers.empty? %>
+<% if !@trainers.present? %>
 <b> No records found!</b>
 <%else%>
 <% for trainer in @trainers %>

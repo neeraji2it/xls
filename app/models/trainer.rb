@@ -1,4 +1,5 @@
 class Trainer < ActiveRecord::Base
+validates :profile_type, :industry,:expertise,:geography, :rating,:presence => true
 REFIRENCE = ["yes","no"]
 	mount_uploader :avatar, AvatarUploader
 
@@ -34,7 +35,7 @@ def self.open_spreadsheet(file)
 end
 
 
-def self.search(name,industry,expertise,location,rating)
-  where("name LIKE ? AND industry LIKE ? AND  expertise LIKE ? AND geography LIKE ? AND rating = #{rating}", "%#{name}%", "%#{industry}%", "%#{expertise}%", "%#{location}%") 
+def self.search(name,expertise,location,rating)
+  where("name LIKE ? AND  expertise LIKE ? AND geography LIKE ? AND rating = #{rating}","%#{name}%", "%#{expertise}%", "%#{location}%") 
 end
 end
