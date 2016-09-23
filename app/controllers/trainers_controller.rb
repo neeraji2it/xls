@@ -21,12 +21,13 @@ def import
     sheet1.each do |row|
         Trainer.create(:name => row[1],:profile_type => row[2],:industry => row[3], :experience => row[4], :expertise => row[5], :geography => row[6], :rating => row[7],:references => row[8])
       end
-  redirect_to trainers_url, notice: "Products imported."
+  redirect_to trainers_url, notice: "Spreadsheet is imported."
 end
+
 def new
 		@trainer= Trainer.new
+end
 
-	end
 def create
 		@trainer= Trainer.new(trainer_params)
 
@@ -36,7 +37,6 @@ def create
 			render "new"
 		end
 	end
-
 
 def show
 		@trainer= Trainer.find(params[:id])
@@ -54,6 +54,7 @@ def update
 			render "edit"
 		end
 	end
+
 def destroy
 		@trainer= Trainer.find(params[:id])
 		@trainer.destroy
