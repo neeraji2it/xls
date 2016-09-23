@@ -1,5 +1,7 @@
 <div class="text-center">
-
+<% if @trainers.empty? %>
+<b> No records found!</b>
+<%else%>
 <% for trainer in @trainers %>
 <td>
   <strong>Trainer:</strong>
@@ -10,7 +12,6 @@
   <%= trainer.geography %>
   </td><br>
   <td>
-
     <strong>Expertise:</strong>
   <%= trainer.expertise %>
   </td><br>
@@ -19,14 +20,11 @@
   <%= trainer.rating %>
   </td><br><br>
 <% end %>
-
+<% end %>
 <td><%= link_to "Back", root_path %></td>
-
 </div>
-
 <style>
    div.text-center{
      float: center;
-
 }
 </style>
