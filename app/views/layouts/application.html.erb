@@ -30,7 +30,7 @@
 <h2>
 SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
 
-  <%= select_tag :trainer_name, options_for_select([["Trainer",""],["Vendor","vendor"]]), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
+  <%= select_tag :trainer_name, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]]), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
             <%#= select_tag :trainer_industry, options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
           <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+Trainer.all.map{|a| a.expertise}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
                <%= select_tag :trainer_geography, options_for_select([["Location",""]]+Trainer.all.map{|a| a.geography}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
