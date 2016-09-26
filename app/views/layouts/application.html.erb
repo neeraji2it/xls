@@ -30,7 +30,7 @@
 <h2>
 SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
 
-  <%= select_tag :trainer_name, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]]), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
+  <%= select_tag :profile_type, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]]), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
             <%#= select_tag :trainer_industry, options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
           <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+Trainer.all.map{|a| a.expertise}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
                <%= select_tag :trainer_geography, options_for_select([["Location",""]]+Trainer.all.map{|a| a.geography}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
@@ -41,30 +41,11 @@ SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
 <%= yield %><br><br>
 <footer>
 <div id= "footer" >
-    <h6 style="position: relative;top: 301px;font-weight: bold;font-color:green;">Copyright © 2016 . All rights reserved.</h6>
+  <%= render :partial => "/layouts/footer" %>
 </div>
-
-<div class="text-right"style="position: relative;top: 251px;">
-  <%= link_to image_tag("facebook.png", alt: "File Name Fancy", size: "2150*2150"), root_path %>
-     <%= link_to image_tag("twiiter.png", alt: "File Name Fancy", size: "2150*2150"), root_path %>
-     <%= link_to image_tag("instagram.png", alt: "File Name Fancy", size: "2150*2150"), root_path %>
-    </div>
-    
 </body>
 </html>
 
 <script>
   $("#search").validate();
 </script>
-
-
-
-<style>
-   div.text-center{
-     float: center;
-}
-div.text-right{
-     float: right;
-   
-}
-</style>
