@@ -35,7 +35,7 @@ def self.open_spreadsheet(file)
 end
 
 
-def self.search(name,expertise,location,rating)
-  where("name LIKE ? OR  expertise LIKE ? OR geography LIKE ? OR rating = #{rating}","%#{name}%", "%#{expertise}%", "%#{location}%") 
+def self.search(profile_type,expertise,location,rating)
+  where("profile_type LIKE ? AND  expertise LIKE ? AND geography LIKE ? OR rating = #{rating}","%#{profile_type}%", "%#{expertise}%", "%#{location}%") 
 end
 end
