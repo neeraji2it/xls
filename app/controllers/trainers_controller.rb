@@ -11,7 +11,7 @@ end
 end
 
 def search
-@trainers = Trainer.search(params[:trainer_name],params[:trainer_expertise],params[:trainer_geography],params[:rating]).order("created_at DESC")
+@trainers = Trainer.search(params[:profile_type],params[:trainer_expertise],params[:trainer_geography],params[:rating]).order("created_at DESC")
 end
 
 def import

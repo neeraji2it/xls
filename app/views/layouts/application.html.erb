@@ -41,12 +41,15 @@ SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
 <%= yield %><br><br>
 <footer>
 <div id= "footer" >
-<%= render :partial => '/layouts/footer' %>
+    <h6 style="position: relative;top: 301px;font-weight: bold;font-color:green;">Copyright © 2016 . All rights reserved.</h6>
 </div>
-</footer>
-<div class="text-center">
-      Copyright © 2016 . All rights reserved.
+
+<div class="text-right"style="position: relative;top: 251px;">
+  <%= link_to image_tag("facebook.png", alt: "File Name Fancy", size: "2150*2150"), root_path %>
+     <%= link_to image_tag("twiiter.png", alt: "File Name Fancy", size: "2150*2150"), root_path %>
+     <%= link_to image_tag("instagram.png", alt: "File Name Fancy", size: "2150*2150"), root_path %>
     </div>
+    
 </body>
 </html>
 
@@ -59,7 +62,6 @@ SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
 <style>
    div.text-center{
      float: center;
-
 }
 div.text-right{
      float: right;
