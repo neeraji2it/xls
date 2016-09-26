@@ -10,6 +10,7 @@
 <body>
 
   <nav id ="nav">
+
  </div> 
 
 <div id= "page_nav" >
@@ -34,7 +35,7 @@ SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
           <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+Trainer.all.map{|a| a.expertise}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
                <%= select_tag :trainer_geography, options_for_select([["Location",""]]+Trainer.all.map{|a| a.geography}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
 <%= select_tag :rating, options_for_select([["Rating","0"]]+Trainer.all.map{|a| a.rating}), :style => "border: 1px solid green;font_size:40;" ,class: "btn btn-primary" %>
-        <%= submit_tag "Search",class: "btn btn-warning"%>   
+<%= submit_tag "Search",class: "btn btn-warning"%>   
 <% end %>
 </div>
 <%= yield %><br><br>
