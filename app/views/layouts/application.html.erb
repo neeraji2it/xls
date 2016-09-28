@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>xls</title>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= csrf_meta_tags %>
-
-</head>
-<body>
-
-  <nav id ="nav">
-
- </div> 
-
-<div id= "page_nav" >
-<%= link_to "Home", root_path %>
-<%= link_to "About","#"  %>
-</div>
-
-<div id= "sign_in" >
-<%= link_to "Help?", root_path %>
-<%= link_to "Trainers", trainers_path %>
-</div></div>
-</nav>
-
-<div id= "main_wrap" >
-<%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
-<h1 style="position: relative;top: -51px;font-weight: bold;font-color:green;"> TRAINERZHUB.COM</h1>
-<h2>
-SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
-
-  <%= select_tag :profile_type, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]]), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
-            <%#= select_tag :trainer_industry, options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
-          <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+Trainer.all.map{|a| a.expertise}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
-               <%= select_tag :trainer_geography, options_for_select([["Location",""]]+Trainer.all.map{|a| a.geography}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
-<%= select_tag :rating, options_for_select([["Rating","0"]]+Trainer.all.map{|a| a.rating}), :style => "border: 1px solid green;font_size:40;" ,class: "btn btn-primary" %>
-<%= submit_tag "Search",class: "btn btn-warning"%>   
-<% end %>
-</div>
-<%= yield %><br><br>
-<footer>
-<div id= "footer" >
-  <%= render :partial => "/layouts/footer" %>
-</div>
-</body>
+  <head>
+    <title>xls</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+    <body>
+      <nav id ="nav">
+        <div id= "page_nav" >
+         <%= link_to "Home", root_path %>
+         <%= link_to "About","#"  %>
+        </div>
+        <div id= "sign_in" >
+         <%= link_to "Help?", root_path %>
+        <%= link_to "Trainers", trainers_path %>
+         </div>
+      </nav>
+        <div id= "main_wrap" >
+          <%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
+            <h1 style="position: relative;top: -51px;font-weight:bold;font-color:green;"> TRAINERZHUB.COM</h1>
+            <h2>
+              SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
+              <%= select_tag :profile_type, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]]), :style => "border: 1px solid green;" ,class: "btn btn-primary" %> 
+                <%#= select_tag :trainer_industry,options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
+                <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+Trainer.all.map{|a| a.expertise}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
+                <%= select_tag :trainer_geography, options_for_select([["Location",""]]+Trainer.all.map{|a| a.geography}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
+                <%= select_tag :rating, options_for_select([["Rating","0"]]+Trainer.all.map{|a| a.rating}), :style => "border: 1px solid green;font_size:40;" ,class: "btn btn-primary" %>
+                <%= submit_tag "Search",class: "btn btn-warning" %>   
+              <% end %>
+        </div>
+        <%= yield %>
+    </body>
+      <footer>
+        <div id= "footer" >
+        <%= render :partial => "/layouts/footer" %>
+         </div>
+      </footer>
 </html>
 
 <script>
   $("#search").validate();
 </script>
+<style>
+ div.text-center{
+     float: center;
+
+}
+</style>

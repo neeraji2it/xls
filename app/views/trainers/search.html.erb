@@ -1,32 +1,36 @@
 <div class="text-center">
-<% if !@trainers.present? %>
-<b> No records found!</b>
-<%else%>
-<% for trainer in @trainers %>
-<td>
-  <strong>Trainer Name:</strong>
-  <%= trainer.name %>
-  </td><br>
-<td>
-  <strong>Trainer Type:</strong>
-  <%= trainer.profile_type %>
-  </td><br>
- <td>
-  <strong>Location:</strong>
-  <%= trainer.geography %>
-  </td><br>
-  <td>
-    <strong>Expertise:</strong>
-  <%= trainer.expertise %>
-  </td><br>
-  <td>
-  <strong>Rating:</strong>
-  <%= trainer.rating %>
-  </td><br><br>
-<% end %>
-<% end %>
-<td><%= link_to "Back", root_path %></td>
+  <% if !@trainers.present? %>
+       <b> No records found!</b>
+  <%else%>
+    <% for trainer in @trainers %>
+      <td>
+        <strong>Trainer Name:</strong>
+        <%= trainer.name %>
+      </td><br>
+      <td>
+        <strong>Trainer Type:</strong>
+        <%= trainer.profile_type %>
+      </td><br>
+      <td>
+        <strong>Location:</strong>
+         <%= trainer.geography %>
+      </td><br>
+      <td>
+        <strong>Expertise:</strong>
+        <%= trainer.expertise %>
+      </td><br>
+      <td>
+       <strong>Rating:</strong>
+       <%= trainer.rating %>
+      </td><br><br>
+    <% end %>
+  <% end %>
+      <td><%= link_to "Back", root_path %></td>
 </div>
+
+
+
+
 <style>
    div.text-center{
      float: center;
