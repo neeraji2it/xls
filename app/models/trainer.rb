@@ -3,6 +3,12 @@ class Trainer < ActiveRecord::Base
      REFIRENCE = ["yes","no"]
 	    mount_uploader :avatar, AvatarUploader
 
+  scope :trainer_profile_type, ->(tprofile_type){where("profile_type = ?", "#{tprofile_type}") if tprofile_type.present?}
+  scope :trainer_expertise, ->(tprofile_type){where("expertise like ?", "#{tprofile_type}") if tprofile_type.present?}
+  scope :trainer_location, ->(tprofile_type){where("geography like ?", "#{tprofile_type}") if tprofile_type.present?}
+  scope :trainer_rating, ->(tprofile_type){where("rating = ?", "#{tprofile_type}") if tprofile_type.present?}
+
+
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
     csv << column_names

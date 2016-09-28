@@ -11,14 +11,18 @@ class TrainersController < ApplicationController
   end
 
   def search
-    @trainers = Trainer.search(params[:profile_type],params[:trainer_expertise],params[:trainer_geography],params[:rating]).order("created_at DESC")
+  	if params[:profile_type].blank? and params[:trainer_expertise].blank? and params[:trainer_geography].blank? and params[:rating].blank?
+  	  @trainers = []
+    else
+      @trainers = Trainer.trainer_profile_type(params[:profile_type]).trainer_expertise(params[:trainer_expertise]).trainer_location(params[:trainer_geography]).trainer_rating(params[:rating])
+    end
   end
 
   def import
 	  file  = params[:file]
 	  book   = Spreadsheet.open(file.path)
     sheet1 = book.worksheet 0
-    sheet1.each do |row|
+    sheet1.each do |row|    	
       Trainer.create(:name => row[1],:profile_type => row[2],:industry => row[3], :experience => row[4], :expertise => row[5], :geography => row[6], :rating => row[7],:references => row[8])
     end
       redirect_to trainers_url, notice: "Spreadsheet is imported."
