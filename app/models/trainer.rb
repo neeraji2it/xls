@@ -4,9 +4,9 @@ class Trainer < ActiveRecord::Base
 	    mount_uploader :avatar, AvatarUploader
 
   scope :trainer_profile_type, ->(tprofile_type){where("profile_type = ?", "#{tprofile_type}") if tprofile_type.present?}
-  scope :trainer_expertise, ->(tprofile_type){where("expertise like ?", "#{tprofile_type}") if tprofile_type.present?}
-  scope :trainer_location, ->(tprofile_type){where("geography like ?", "#{tprofile_type}") if tprofile_type.present?}
-  scope :trainer_rating, ->(tprofile_type){where("rating = ?", "#{tprofile_type}") if tprofile_type.present?}
+  scope :trainer_expertise, ->(texpertise){where("expertise like ?", "#{texpertise}") if texpertise.present?}
+  scope :trainer_location, ->(tgeography){where("geography like ?", "#{tgeography}") if tgeography.present?}
+  scope :trainer_rating, ->(trating){where("rating = ?", "#{trating}") if trating.present?}
 
 
   def self.to_csv(options = {})
