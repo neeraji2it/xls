@@ -24,6 +24,7 @@
          </div>
       </nav>
         <div id= "main_wrap" >
+        
           <%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
             <h1 style="position: relative;top: -51px;font-weight:bold;color:white;"> TRAINERZHUB.COM</h1>
             <h2 style="position: relative;top: 6px;font-weight:bold;color:red;">
@@ -39,12 +40,11 @@
 
         </div>
         <%= yield %>
-    </body>
-      <footer>
-        <div id= "footer" >
+    
+ <div id= "footer" >
         <%= render :partial => "/layouts/footer" %>
-         </div>
-      </footer>
+  </div>
+</body>
      
 </html>
 
@@ -56,6 +56,18 @@
      float: center;
 
 }
+
+  #footer {
+    clear: both;
+    height: 87px;
+    color:#ccc;
+    font-size:12px;
+    position:relative;
+    z-index: 10;
+    margin-top: -3em;
+    background-color:black;
+    top: 35px;
+  }
 </style>
 
 
