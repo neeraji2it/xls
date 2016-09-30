@@ -8,7 +8,7 @@
     <%= csrf_meta_tags %>
   </head>
     <body>
-    
+
       <nav id ="nav">
 
         <div id= "page_nav" >
@@ -35,19 +35,14 @@
 
                   <%= submit_tag "Search",class: "btn btn-warning btn-lg" %>   
               <% end %>
-
-        </div>
+      </div>
         <div class="container">
-        <%= yield %>
-      
-  
-    
-     <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
- <h7 style="position: relative;top: 16px; left: 573px;font-weight:bold;color:white;"> @ All rights reserved</h7>
-   
- 
-</div>
-    </div></body> 
+            <%= yield %>
+          <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+              <h7 style="position: relative;top: 16px; left: 573px;font-weight:bold;color:white;"> @ All rights reserved</h7>
+        </div>
+      </div>
+  </body> 
      
 </html>
 
