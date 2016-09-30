@@ -2,14 +2,13 @@
 <html>
   <head>
     <title>XLS</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
     <body>
+    
       <nav id ="nav">
 
         <div id= "page_nav" >
@@ -26,7 +25,7 @@
         <div id= "main_wrap" >
           <%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
             <h1 style="position: relative;top: -51px;font-weight:bold;color:white;"> TRAINERZHUB.COM</h1>
-            <h2 style="position: relative;top: 6px;font-weight:bold;color:red;">
+            <h2 style="position: relative;top: 11px;font-weight:bold;color:red;">
               SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
               <%= select_tag :profile_type, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]], selected: params[:profile_type]), :style => "border: 1px solid green;" ,class: "btn btn-primary btn-lg" %> 
                 <%#= select_tag :trainer_industry,options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
@@ -38,15 +37,20 @@
               <% end %>
 
         </div>
+        <div class="container">
         <%= yield %>
-    </body>
-      <footer>
-        <div id= "footer" >
-        <%= render :partial => "/layouts/footer" %>
-         </div>
-      </footer>
+      
+  
+    
+     <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+ <h7 style="position: relative;top: 16px; left: 573px;font-weight:bold;color:white;"> @ All rights reserved</h7>
+   
+ 
+</div>
+    </div></body> 
      
 </html>
+
 
 <script>
   $("#search").validate();
@@ -57,5 +61,4 @@
 
 }
 </style>
-
 
