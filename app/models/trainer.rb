@@ -17,6 +17,7 @@ class Trainer < ActiveRecord::Base
       end
     end
   end
+  
   def self.import(file)
     spreadsheet = open_spreadsheet(file)
     header = spreadsheet.row(1)
@@ -41,4 +42,5 @@ class Trainer < ActiveRecord::Base
   def self.search(name,expertise,location,rating)
     where("profile_type = ? AND (expertise LIKE ? OR geography LIKE ? OR rating = #{rating})","#{name}", "%#{expertise}%", "%#{location}%") 
   end
+  
 end
