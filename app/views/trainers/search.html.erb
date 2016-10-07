@@ -1,10 +1,9 @@
-<div class="text-center">
-<br><br>
-  <% if !@trainers.present? %>
+
+       <div class="text-center">
+<% if !@trainers.present? %>
        <b><p style="color:red;">No records found!</p></b>
   <%else%>
     <% for trainer in @trainers %>
-
       <td>
         <strong>Trainer Name:</strong>
         <%= trainer.name %>
@@ -28,7 +27,8 @@
     <% end %>
   <% end %>
    <%= link_to "back", root_path %>  
-</div> <br><br><br><br>  
+</div> <br><br><br><br>
+
 
 <style>
    div.text-center{
@@ -38,3 +38,4 @@
      float: right;
 }
 </style>
+

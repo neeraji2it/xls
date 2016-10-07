@@ -6,6 +6,7 @@ gem 'rubyzip'
 gem "jquery-form-validator-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'devise'
 #gem 'jdbc-mysql',      '= 5.1.35', :platform => :jruby
 #gem 'thinking-sphinx'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
