@@ -89,4 +89,4 @@ config.action_mailer.delivery_method = :smtp
     :enable_starttls_auto => true
   }
 end
-end
+

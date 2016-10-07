@@ -32,7 +32,8 @@ Devise.setup do |config|
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
   # config.authentication_keys = [:email]
-
+config.secret_key =  '2c734af9236d8849e82a5e07185f2905b320da78cdafd87753a1d9a3adabc590bf9d9ddf083d4b57382e5631274527adb06c2a43580958dbd67e7d17b31e8a56'
+ 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
   # find_for_authentication method and considered in your model lookup. For instance,
