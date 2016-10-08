@@ -85,7 +85,6 @@ config.action_mailer.delivery_method = :smtp
     :user_name            => 'onlinesticker12151@gmail.com',
     :password             => 'Nagaraju@2015', #'dinemedia!@#',
     :authentication       => 'plain',
-
     :enable_starttls_auto => true
   }
 end
