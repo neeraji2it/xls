@@ -7,9 +7,7 @@ class ApplicationController < ActionController::Base
     if: Proc.new { |c| c.request.format =~ %r{application/json} }
 
 
-
-
-  def configure_permitted_parameters
+def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up).push(:email,:role, :first_name, :last_name, :username, :gender_type_list, :name, :address, :city, :phone, :date_of_birth,:password, :student, :password_confirmation)
   end
 end
