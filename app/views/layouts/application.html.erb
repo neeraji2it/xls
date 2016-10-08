@@ -19,12 +19,12 @@
    
         <div id= "sign_in" >
           <% if current_user.present? %>
-            <%= link_to ('Trainers<span class="glyphicon glyphicon-user"> </span>').html_safe, trainers_path %>
+            
             <%= link_to ('<span class="glyphicon glyphicon-off"></span>').html_safe, destroy_user_session_path, :method => :delete %>
          <% else %>
             <%= link_to "Help?", root_path %>
-       
-            <%= link_to ('Sign in <span class="glyphicon glyphicon-user"> </span>').html_safe, new_user_session_path(current_user)  %>
+       <%= link_to ('Trainers<span class="glyphicon glyphicon-user"> </span>').html_safe, trainers_path %>
+            <%#= link_to ('Sign in <span class="glyphicon glyphicon-user"> </span>').html_safe, new_user_session_path(current_user)  %>
           <% end %>
         </div>
       </nav>
