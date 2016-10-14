@@ -8,7 +8,11 @@
   <%= devise_error_messages! %>
  <br>
       <%= f.hidden_field :role, :value => params[:role] %>
+<ul class="role">
+<%= f.radio_button :role, "trainer" %> Trainer&nbsp;<br>
+<%= f.radio_button :role, "user" %> User&nbsp;<br>
 
+</ul>
  <br>
     
       <div class="row">
