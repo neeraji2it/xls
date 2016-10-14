@@ -56,7 +56,7 @@ config.secret_key =  '2c734af9236d8849e82a5e07185f2905b320da78cdafd87753a1d9a3ad
   # given strategies, for example, `config.params_authenticatable = [:database]` will
   # enable it only for database (email + password) authentication.
   # config.params_authenticatable = true
-
+config.allow_insecure_sign_in_after_confirmation = true
   # Tell if authentication through HTTP Auth is enabled. False by default.
   # It can be set to an array that will enable http authentication only for the
   # given strategies, for example, `config.http_authenticatable = [:database]` will
