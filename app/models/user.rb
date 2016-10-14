@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
 protected
 
 def confirmation_required?
-    self.provider.nil?
+    self.user.nil?
 end
 end
