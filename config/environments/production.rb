@@ -88,7 +88,7 @@ Rails.application.configure do
     port: 25,
     domain: "xls12.herokuapp.com",
     authentication: "plain",
-    user_name: ENV["kammaranagaraju@gmail.com"],
+    user_name: ENV["onlinesticker12151@gmail.com"],
     password: ENV["Nagaraju@2015"]
   }
 end
