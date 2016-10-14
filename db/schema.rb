@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007121829) do
+ActiveRecord::Schema.define(version: 20161007104419) do
 
   create_table "trainers", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -60,7 +60,6 @@ ActiveRecord::Schema.define(version: 20161007121829) do
     t.string   "active",                 limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "trainer_id",             limit: 255
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
