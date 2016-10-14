@@ -41,14 +41,14 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :city
       t.string :phone
       t.date :date_of_birth
-    t.string :no
+      t.string :no
       t.string :active
       t.timestamps
     end
 
     add_index :users, :email,                :unique => true
     add_index :users, :reset_password_token, :unique => true
-     add_index :users, :confirmation_token,   :unique => true
+    #add_index :users, :confirmation_token,   :unique => true
     # add_index :users, :unlock_token,         :unique => true
     # add_index :users, :authentication_token, :unique => true
   end
