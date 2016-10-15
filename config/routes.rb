@@ -19,7 +19,7 @@ resources :trainers do
     get :search
   end
 end
-
+ get "/signup", :to => "welcome#signup"
   # Example resource route with options:
   #   resources :products do
   #     member do

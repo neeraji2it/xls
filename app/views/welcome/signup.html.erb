@@ -1,0 +1,57 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="panel panel-default">
+  <h1 style=" color: black;
+    font-weight: bold;
+    left: -258px;
+    position: relative;
+    text-align: center;
+    top: 3px;
+    width: 1089px;"> Create your  account</h1>
+    <div class="panel-heading">
+
+<div class="text-center">
+ <div id="main-container" class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-xs-3" style="background: none repeat scroll 0 0 ; height: 11em; left: 70px; top: -3px; width: 38%;border: 1px solid green;" >
+       <%= link_to image_tag("trainer.png", alt: "File Name Fancy", size: "70x83"),new_user_registration_path(:role => 'trainer') %>
+        <p style="  color: green;
+    font-weight: bold;
+    left: 54px;
+    position: relative;
+    text-align: center;
+    top: 20px;
+    width: 10px"> 
+       Trainers</p>
+        </div>
+        <div id="main-content" class="col-xs-9" style="background: none repeat scroll 0 0 ;
+    height: 11em;
+    left: 92px;
+    top: -3px;
+    width: 38%;border: 1px solid green;">
+         <%= link_to image_tag("users.png", alt: "File Name Fancy", size: "66x89"), new_user_registration_path(:role => 'user') %>
+        <p style="  color: green;
+    font-weight: bold;
+    left: 54px;
+    position: relative;
+    text-align: center;
+    top: 12px;
+    width: 10px"> 
+       Users</p>
+        </div>
+      </div>
+    </div>
+   
+<br>
+
+
+
+</div></div></div></div>
+
+<style type="text/css">  
+div.text-center{
+    float: center;
+  }
+  div.text-right{
+     float: right;
+  }
+  </style>
