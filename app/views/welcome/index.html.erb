@@ -1,14 +1,3 @@
- <%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
-        
-            <h2 style="position: relative;top: 10px;font-weight:bold;color:red;">
-              SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
-               <%= select_tag :profile_type, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]], selected: params[:profile_type]), :style => "border: 1px solid green;" ,class: "btn btn-primary btn-lg" %> 
-                <%#= select_tag :trainer_industry,options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
-                <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+(Trainer.all.map{|a| a.expertise}).uniq, selected: params[:trainer_expertise]), :style => "border: 1px solid green;" ,class: "btn btn-primary btn-lg" %>
-                <%= select_tag :trainer_geography, options_for_select([["Location",""]]+(Trainer.all.map{|a| a.geography}).uniq, selected: params[:trainer_geography]), :style => "border: 1px solid green;" ,class: "btn btn-primary btn-lg" %>
-                <%= select_tag :rating, options_for_select([["Rating",""]]+(Trainer.all.map{|a| a.rating}).uniq, selected: params[:rating]), :style => "border: 1px solid green;font_size:40;" ,class: "btn btn-primary btn-lg" %>
-
-                  <%= submit_tag "Search",class: "btn btn-success btn-lg" %>   
-              <% end %>   
+   
    
 
