@@ -14,9 +14,11 @@
        
          <%= link_to ('Home<span class="glyphicon glyphicon-home"> </span>').html_safe, root_path %>
           <%= link_to "About","#"  %>
-    
+    <h1 style="color: white;font-weight: bold;left: 432px;position: relative;text-align: center;
+    top: -44px;
+    width: 0;"> TRAINERZHUB.COM</h1>
         </div>
-   
+    
         <div id= "sign_in" >
           <% if current_user.present? %>
               <%= link_to ('Trainers<span class="glyphicon glyphicon-user"> </span>').html_safe, trainers_path %>
@@ -32,18 +34,7 @@
       </nav>
         <div id= "main_wrap" >
   
-          <%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
-         <h1 style="position: relative; top: -51px; font-weight: bold; color: white; text-align: center; width: 1089px;"> TRAINERZHUB.COM</h1>
-            <h2 style="position: relative;top: 10px;font-weight:bold;color:red;">
-              SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
-               <%= select_tag :profile_type, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]], selected: params[:profile_type]), :style => "border: 1px solid green;" ,class: "btn btn-primary btn-lg" %> 
-                <%#= select_tag :trainer_industry,options_for_select([["Industry",""]]+Trainer.all.map{|a| a.industry}), :style => "border: 1px solid green;" ,class: "btn btn-primary" %>
-                <%= select_tag :trainer_expertise, options_for_select([["Expertise",""]]+(Trainer.all.map{|a| a.expertise}).uniq, selected: params[:trainer_expertise]), :style => "border: 1px solid green;" ,class: "btn btn-primary btn-lg" %>
-                <%= select_tag :trainer_geography, options_for_select([["Location",""]]+(Trainer.all.map{|a| a.geography}).uniq, selected: params[:trainer_geography]), :style => "border: 1px solid green;" ,class: "btn btn-primary btn-lg" %>
-                <%= select_tag :rating, options_for_select([["Rating",""]]+(Trainer.all.map{|a| a.rating}).uniq, selected: params[:rating]), :style => "border: 1px solid green;font_size:40;" ,class: "btn btn-primary btn-lg" %>
-
-                  <%= submit_tag "Search",class: "btn btn-success btn-lg" %>   
-              <% end %>
+         
         </div>
     
         <div class="container">
@@ -51,7 +42,7 @@
             </div>
               </body> <br><br><br>
           <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-              <h7 style="position: relative;top: 16px; left: 560px;font-weight:bold;color:white;"> @ All Rights Reserved</h7>
+              <h7 style="position: relative;top: 16px; left: 560px;font-weight:bold;color:white;text-align: center;"> @ All Rights Reserved</h7>
 
         </div>
 </html>
