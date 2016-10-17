@@ -18,7 +18,7 @@
     text-align: center;
     top: 20px;
     width: 10px"> 
-       Trainers</p>
+     <%= link_to "Trainers",new_user_registration_path(:role => 'trainer') %></p>
         </div>
         <div id="main-content" class="col-xs-9" style="background: none repeat scroll 0 0 ;
     height: 11em;
@@ -33,7 +33,7 @@
     text-align: center;
     top: 12px;
     width: 10px"> 
-       Users</p>
+      <%= link_to "Users",new_user_registration_path(:role => 'user') %></p>
         </div>
       </div>
     </div>
