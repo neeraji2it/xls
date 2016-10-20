@@ -1,7 +1,8 @@
 class TrainersController < ApplicationController
 
 	def index
- 	  @trainers = Trainer.all
+
+
     @trainer= Trainer.new
     respond_to do |format|
       format.html
@@ -11,11 +12,13 @@ class TrainersController < ApplicationController
   end
 
   def search
+   @trainers=Trainer.all.order("created_at ASC")
   	if params[:profile_type].blank? and params[:trainer_expertise].blank? and params[:trainer_geography].blank? and params[:rating].blank?
   	  @trainers = []
     else
       @trainers = Trainer.trainer_profile_type(params[:profile_type]).trainer_expertise(params[:trainer_expertise]).trainer_location(params[:trainer_geography]).trainer_rating(params[:rating])
     end
+
   end
 
   def import

@@ -27,13 +27,14 @@
           
             <%= link_to ('Sign in <span class="glyphicon glyphicon-user"> </span>').html_safe, new_user_session_path(current_user)  %>
           <% end %>
+          
         </div>
 
       </nav>
         <div id= "main_wrap" >
   
           <%= form_tag search_trainers_path, :method => 'get', style: "width: 100%; text-align: center; position: relative; top: -44px;",:id => "search" do %>
-         <h1 style="position: relative; top: -36px; font-weight: bold; color: white; text-align: center; width: 1089px;"> TRAINERZHUB.COM</h1>
+         <h1 style="position: relative; top: -41px; font-weight: bold; color: white; text-align: center; width: 1089px;"> TRAINERZHUB.COM</h1>
             <h2 style="position: relative;top: 10px;font-weight:bold;color:red;">
               SEARCH FOR TRAINERS & VENDORS &<br> ACROSS SECTORS & EXPERTISE AREAS</h2><br>
                <%= select_tag :profile_type, options_for_select([["Select",""],["Trainer","Individual"],["Vendor","Company"]], selected: params[:profile_type]), :style => "border: 1px solid green;" ,class: "btn btn-primary btn-lg" %> 
